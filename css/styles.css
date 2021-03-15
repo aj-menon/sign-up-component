@@ -5,7 +5,7 @@
 
 body {
 	min-width: 1440px;
-overflow: hidden;
+	overflow: hidden;
 	background: url("../img/bg-intro-desktop.png") no-repeat center center fixed;
 }
 .App {
@@ -114,7 +114,7 @@ input:focus {
 	font-size: 10px;
 	color: #c3c1cd;
 }
-#error {
+div.showerror {
 	visibility: hidden;
 	font-weight: 400;
 	font-style: italic;
@@ -131,7 +131,7 @@ input:focus {
 	visibility: hidden;
 }
 
-#icon {
+span.err-icon {
 	float: right;
 	margin-right: 21px;
 	margin-top: -56px;

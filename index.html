@@ -1,93 +1,77 @@
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<meta name="theme-color" content="#000000" />
 
-		<style>
-			@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-		</style>
-		<script type="text/javascript" src="js/script.js"></script>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="theme-color" content="#000000" />
 
-		<link href="./css/styles.css" rel="stylesheet" type="text/css" />
-		<title>Frontend Mentor - Sign up</title>
-	</head>
-	<body>
-		<div class="App">
-			<div class="grid-container">
-				<div class="grid-child header">
-					<h1>Learn to code by watching others</h1>
-					<h4>
-						See how experienced developers solve problems in real-time. Watching
-						scripted tutorials is great, but understanding how developers think
-						is invaluable.
-					</h4>
+	<style>
+		@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+	</style>
+	<script type="text/javascript" src="js/script.js"></script>
+
+	<link href="./css/styles.css" rel="stylesheet" type="text/css" />
+	<title>Frontend Mentor - Sign up</title>
+</head>
+
+<body>
+	<div class="App">
+		<div class="grid-container">
+			<div class="grid-child header">
+				<h1>Learn to code by watching others</h1>
+				<h4>
+					See how experienced developers solve problems in real-time. Watching
+					scripted tutorials is great, but understanding how developers think
+					is invaluable.
+				</h4>
+			</div>
+
+			<div class="grid-child claim-form">
+				<div class="info">
+					<span>Try it free 7 days </span>
+					then $20/mo. thereafter
 				</div>
-
-				<div class="grid-child claim-form">
-					<div class="info">
-						<span>Try it free 7 days </span>
-						then $20/mo. thereafter
-					</div>
-					<div class="form">
-						<input
-							placeholder="First name"
-							name="fname"
-							label='fname'
-							id="fname"
-							type="text"
-							value=""
-                            style="margin-top:1em"
-						/>
-						<span class="err-icon" id='icon'
-							><img src="img/icon-error.svg" alt="error"
-						/></span>
-						<div id="error">
+				<div class="form">
+					<label for="fname">
+						<input placeholder="First name" name="fname" label="fname" id="fname" type="text" value=""
+							style="margin-top: 1em" onkeyup="handleInputChange(this)" />
+						<span class="err-icon"><img src="img/icon-error.svg" alt="error" id='icon-fname' /></span>
+						<div class="showerror">
 							<span class="errors" id="err-fname"></span>
 						</div>
-						<input
-							placeholder="Last name"
-							name="lname"
-							label='lname'
-							id="lname"
-							type="text"
-						/>
-                        <span class="err-icon" id='icon'><img src='img/icon-error.svg' alt='error' /></span>
-						<div id="error">
+					</label>
+					<label for="lname">
+						<input placeholder="Last name" name="lname" label="lname" id="lname" type="text"
+							onkeyup="handleInputChange(this)" />
+						<span class="err-icon"><img src="img/icon-error.svg" alt="error" id='icon-lname' /></span>
+						<div class="showerror">
 							<span class="errors" id="err-lname"></span>
 						</div>
-						<!-- <span class='error' id='err-lname'></span> -->
-						<input
-							placeholder="Email Address"
-							name="email"
-							id="email"
-							label='email'
-							type="text"
-						/>
-                        <span class=" err-icon" id='icon'><img src='img/icon-error.svg' alt='error' /></span>
-                        <div id="error"><span class="errors" id="err-email"></span></div>
-						<input
-							placeholder="Password"
-							name="password"
-							label='password'
-							id="pwd"
-							type="password"
-						/>
-                        <span class=" err-icon" id='icon'><img src='img/icon-error.svg' alt='error' /></span>
-                        <div id="error"><span class="errors" id="err-pwd"></span></div>
-						<button class="btn-submit" id="btn-submit" onclick="submit()">
-							Claim your free trial
-						</button>
-						<div class="disclaimer">
-							By clicking the button, you are agreeing to our
-							<span class="bold"> Terms and Services</span>
-						</div>
+					</label>
+					<!-- <span class='error' id='err-lname'></span> -->
+					<label for="email">
+						<input placeholder="Email Address" name="email" id="email" label="email" type="text"
+							onkeyup="handleInputChange(this)" />
+						<span class="err-icon"><img src="img/icon-error.svg" alt="error" id='icon-email' /></span>
+						<div class="showerror"><span class="errors" id="err-email"></span></div>
+					</label>
+					<label for="password">
+						<input placeholder="Password" name="password" label="password" id="pwd" type="password"
+							onkeyup="handleInputChange(this)" />
+						<span class="err-icon"><img src="img/icon-error.svg" alt="error" id='icon-pwd' /></span>
+						<div class="showerror"><span class="errors" id="err-pwd"></span></div>
+					</label>
+					<button class="btn-submit" id="btn-submit" onclick="submit()">
+						Claim your free trial
+					</button>
+					<div class="disclaimer">
+						By clicking the button, you are agreeing to our
+						<span class="bold"> Terms and Services</span>
 					</div>
 				</div>
 			</div>
 		</div>
-	</body>
+	</div>
+</body>
+
 </html>

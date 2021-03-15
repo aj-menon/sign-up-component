@@ -6,7 +6,7 @@
 body {
 	min-width: 1440px;
 overflow: hidden;
-	background: url("../img/bg-intro-desktop.png") no-repeat center center fixed !important;
+	background: url("../img/bg-intro-desktop.png") no-repeat center center fixed;
 }
 .App {
 	text-align: center;

@@ -1,5 +1,5 @@
 window.onload = function () {
-	// your code
+	
 
 	submit = () => {
 		let fname = document.getElementById("fname").value;
@@ -48,7 +48,7 @@ window.onload = function () {
 			document.getElementById("err-fname").style.fontSize = "10px";
 			document.getElementById("err-fname").style.float = "right";
 		}
-		if (!lname || lname == "") {
+		if (!lname || lname === "") {
 			document.getElementById("lname").style.border =
 				"2px solid hsl(0,100%,74%)";
 
@@ -60,7 +60,7 @@ window.onload = function () {
 			document.getElementById("err-lname").style.fontSize = "10px";
 			document.getElementById("err-lname").style.float = "right";
 		}
-		if (validateEmail(email) || email == "") {
+		if (validateEmail(email) || email === "") {
 			document.getElementById("email").style.border =
 				"2px solid hsl(0,100%,74%)";
 
@@ -73,11 +73,11 @@ window.onload = function () {
 
 			document.getElementById("err-email").style.float = "right";
 		}
-		if (!pwd || pwd == "") {
+		if (!pwd || pwd === "") {
 			document.getElementById("pwd").style.border = "2px solid hsl(0,100%,74%)";
 
 			document.getElementById("err-pwd").innerText =
-				"Looks like this is not an pwd";
+				"Password cannot be empty";
 			document.getElementById("err-pwd").style.visibility = "visible";
 			document.getElementById("err-pwd").style.color = "hsl(0,100%,74%)";
 

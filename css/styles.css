@@ -1,0 +1,142 @@
+* {
+	font-size: 16px;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	min-width: 1440px;
+
+	background: url("../img/bg-intro-desktop.png") no-repeat center center fixed !important;
+	min-height: 100vh;
+	/* height: 100%;  */
+}
+.App {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
+	background-color: hsl(0, 100%, 44%, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.App .grid-container .header > h1,
+.App .grid-container .header > h4 {
+	color: white;
+	text-align: left;
+}
+.App .grid-container .header > h1 {
+	font-size: 3em;
+	margin: 1.5em 1em 0 0.5em;
+	font-weight: 700;
+}
+.App .grid-container .header {
+	margin-top: 70px;
+
+	position: relative;
+}
+.App .grid-container .header > h4 {
+	font-weight: 200;
+	margin-left: 1.5em;
+	font-weight: 400;
+}
+.grid-container {
+	display: grid;
+	grid-template-columns: 3fr 4fr;
+	justify-content: center;
+
+	margin: 10% 15%;
+}
+.grid-child.claim-form .info {
+	background-color: #5d54a3;
+	color: white;
+	padding: 1em 2em;
+	font-weight: 200;
+}
+.grid-child.claim-form .info > span {
+	font-weight: 500;
+}
+.grid-child.claim-form .info,
+.grid-child.claim-form > .form {
+	box-shadow: 0 4px 2px 0 #ce6463;
+	border-radius: 0.5em;
+	width: 100%;
+	max-width: 30em;
+	display: inline-block;
+	/* width: 100%; */
+}
+.grid-child.claim-form > .form {
+	background-color: white;
+	margin-top: 1em;
+	padding: 1em 2em;
+}
+input {
+	width: 100%;
+	max-width: 460px;
+	margin: 1em;
+	border-radius: 0.4em;
+	height: 55px;
+	padding: 1em;
+	border: hsl(246, 25%, 77%) 0.2px solid;
+}
+input:focus {
+	border: 0.5px solid #615c7b;
+}
+.btn-submit {
+	text-transform: uppercase;
+	background-color: hsl(154, 59%, 51%);
+	font-weight: 500;
+	letter-spacing: space-evenly;
+	font-size: 14px;
+	color: white;
+	width: 100%;
+	max-width: 420px;
+	border-radius: 0.2em;
+	box-shadow: 0 4px 2px 2px #3eb37f;
+	height: 50px;
+	border: none;
+	margin: 1em;
+}
+.input,
+.btn-submit {
+	outline: none;
+}
+.btn-submit:hover {
+	cursor: pointer;
+}
+.bold {
+	color: #dd6767;
+	font-weight: 600;
+	font-size: 10px;
+	cursor: pointer;
+}
+.disclaimer {
+	font-size: 10px;
+	color: #c3c1cd;
+}
+#error {
+	visibility: hidden;
+	font-weight: 400;
+	font-style: italic;
+}
+
+.errors {
+	visibility: visible;
+	color: hsl(0, 100%, 74%);
+	font-size: 10px;
+	float: right;
+	/* border:2px solid hsl(0,100%,74%); */
+}
+.err-icon {
+	visibility: hidden;
+}
+
+#icon {
+	float: right;
+	margin-right: 21px;
+	margin-top: -56px;
+	position: relative;
+	z-index: 2;
+}

@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/intro-component-with-sign-up-form-using-html-css-and-js-B5baBHTIU)
+- Live Site URL: [sign-up-component](https://sign-up-component-aj-menon.vercel.app/)
 
 ### Built with
 

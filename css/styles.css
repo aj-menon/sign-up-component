@@ -138,3 +138,15 @@ span.err-icon {
 	position: relative;
 	z-index: 2;
 }
+.attribution {
+	font-size: 10px;
+	text-align: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 10;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+	font-size: 11px;
+}

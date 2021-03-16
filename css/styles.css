@@ -151,6 +151,9 @@ span.err-icon {
 .hide {
 	visibility: hidden;
 }
+.show {
+	visibility: visible;
+}
 /* .attribution {
 	font-size: 10px;
 	text-align: center;

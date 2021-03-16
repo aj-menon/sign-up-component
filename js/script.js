@@ -37,6 +37,9 @@ validateInput = (id) => {
 	let input = document.getElementById(id).value;
 	if (!input || input === "") {
 		document.getElementById(id).style.border = "2px solid hsl(0,100%,74%)";
+		document.getElementById(`err-${id}`).classList.add("showerrors");
+		document.getElementById(`err-${id}`).classList.remove("hide");
+		console.log(`err-${id}`);
 		switch (id) {
 			case "fname":
 				document.getElementById(`err-${id}`).innerText =
@@ -46,32 +49,34 @@ validateInput = (id) => {
 			case "lname":
 				document.getElementById(`err-${id}`).innerText =
 					"Last Name cannot be empty";
+
 				break;
 			case "pwd":
 				document.getElementById(`err-${id}`).innerText =
 					"Password cannot be empty";
+
 				break;
 		}
 		let icon = document.getElementsByClassName("err-icon");
 		for (var i = 0; i < icon.length; i++) {
 			icon[i].style.visibility = "visible";
 		}
-		document.getElementById(`err-${id}`).classList.add("showerrors");
 	} else {
 		document.getElementById(id).style.borderColor = "hsl(154, 59%, 51%)";
-
-		document.getElementById(`err-${id}`).classList.add("hide");
 
 		switch (id) {
 			case "fname":
 				document.getElementById(`icon-${id}`).classList.add("hide");
+				document.getElementById(`err-${id}`).classList.add("hide");
 				break;
 			case "lname":
 				document.getElementById(`icon-${id}`).classList.add("hide");
+				document.getElementById(`err-${id}`).classList.add("hide");
 				break;
 
 			case "pwd":
 				document.getElementById(`icon-${id}`).classList.add("hide");
+				document.getElementById(`err-${id}`).classList.add("hide");
 				break;
 		}
 	}

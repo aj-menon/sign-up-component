@@ -21,6 +21,8 @@ validateEmail = (id) => {
 		document.getElementById("err-email").innerText =
 			"Looks like this is not an email";
 		document.getElementById(`err-${id}`).classList.add("showerrors");
+		document.getElementById(`err-${id}`).classList.remove("hide");
+		document.getElementById(`icon-${id}`).classList.remove("hide");
 		// document.getElementById("err-email").style.visibility = "visible";
 		// document.getElementById("err-email").style.color = "hsl(0,100%,74%)";
 
@@ -39,6 +41,8 @@ validateInput = (id) => {
 		document.getElementById(id).style.border = "2px solid hsl(0,100%,74%)";
 		document.getElementById(`err-${id}`).classList.add("showerrors");
 		document.getElementById(`err-${id}`).classList.remove("hide");
+		document.getElementById(`icon-${id}`).classList.remove("hide");
+
 		console.log(`err-${id}`);
 		switch (id) {
 			case "fname":

@@ -20,17 +20,17 @@ validateEmail = (id) => {
 
 		document.getElementById("err-email").innerText =
 			"Looks like this is not an email";
-		document.getElementById("err-email").style.visibility = "visible";
-		document.getElementById("err-email").style.color = "hsl(0,100%,74%)";
+		document.getElementById(`err-${id}`).classList.add("showerrors");
+		// document.getElementById("err-email").style.visibility = "visible";
+		// document.getElementById("err-email").style.color = "hsl(0,100%,74%)";
 
-		document.getElementById("err-email").style.fontSize = "10px";
+		// document.getElementById("err-email").style.fontSize = "10px";
 
-		document.getElementById("err-email").style.float = "right";
+		// document.getElementById("err-email").style.float = "right";
 	} else {
-		document.getElementById(`icon-${id}`).style.visibility = "hidden";
+		document.getElementById(`icon-${id}`).classList.add("hide");
 		document.getElementById(id).style.borderColor = "hsl(154, 59%, 51%)";
-
-		document.getElementById(`err-${id}`).style.visibility = "hidden";
+		document.getElementById(`err-${id}`).classList.add("hide");
 	}
 };
 validateInput = (id) => {
@@ -52,27 +52,26 @@ validateInput = (id) => {
 					"Password cannot be empty";
 				break;
 		}
-
-		document.getElementById(`err-${id}`).style.visibility = "visible";
-		document.getElementById(`err-${id}`).style.color = "hsl(0,100%,74%)";
-
-		document.getElementById(`err-${id}`).style.fontSize = "10px";
-		document.getElementById(`err-${id}`).style.float = "right";
+		let icon = document.getElementsByClassName("err-icon");
+		for (var i = 0; i < icon.length; i++) {
+			icon[i].style.visibility = "visible";
+		}
+		document.getElementById(`err-${id}`).classList.add("showerrors");
 	} else {
 		document.getElementById(id).style.borderColor = "hsl(154, 59%, 51%)";
 
-		document.getElementById(`err-${id}`).style.visibility = "hidden";
+		document.getElementById(`err-${id}`).classList.add("hide");
 
 		switch (id) {
 			case "fname":
-				document.getElementById(`icon-${id}`).style.visibility = "hidden";
+				document.getElementById(`icon-${id}`).classList.add("hide");
 				break;
 			case "lname":
-				document.getElementById(`icon-${id}`).style.visibility = "hidden";
+				document.getElementById(`icon-${id}`).classList.add("hide");
 				break;
 
-			case "password":
-				document.getElementById(`icon-${id}`).style.visibility = "hidden";
+			case "pwd":
+				document.getElementById(`icon-${id}`).classList.add("hide");
 				break;
 		}
 	}

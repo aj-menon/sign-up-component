@@ -7,6 +7,9 @@ body {
 	min-width: 1440px;
 	overflow: hidden;
 	background: url("../img/bg-intro-desktop.png") no-repeat center center fixed;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 .App {
 	text-align: center;
@@ -42,7 +45,7 @@ body {
 }
 .grid-container {
 	display: grid;
-	grid-template-columns: 4fr 4fr;
+	grid-template-columns: 3fr 4fr;
 	justify-content: center;
 
 	margin: 10% 15%;
@@ -51,7 +54,7 @@ body {
 	background-color: #5d54a3;
 	color: white;
 	padding: 1em 2em;
-	font-weight: 200;
+	/* font-weight: 200; */
 }
 .grid-child.claim-form .info > span {
 	font-weight: 500;
@@ -63,19 +66,21 @@ body {
 	width: 100%;
 	max-width: 30em;
 	display: inline-block;
+
 	/* width: 100%; */
 }
 .grid-child.claim-form > .form {
 	background-color: white;
-	margin-top: 1em;
+	margin: 1em;
+
 	padding: 1em 2em;
 }
 input {
 	width: 100%;
-	max-width: 460px;
+	max-width: 415px;
 	margin: 1em;
 	border-radius: 0.4em;
-	height: 55px;
+	/* height: 55px; */
 	padding: 1em;
 	border: hsl(246, 25%, 77%) 0.2px solid;
 }
@@ -127,9 +132,6 @@ div.showerror {
 	float: right;
 	/* border:2px solid hsl(0,100%,74%); */
 }
-.err-icon {
-	visibility: hidden;
-}
 
 span.err-icon {
 	float: right;
@@ -137,16 +139,26 @@ span.err-icon {
 	margin-top: -56px;
 	position: relative;
 	z-index: 2;
+	visibility: hidden;
 }
-.attribution {
+.showerrors {
+	visibility: visible;
+	color: hsl(0, 100%, 74%);
+
+	font-size: 10px;
+	float: right;
+}
+.hide {
+	visibility: hidden;
+}
+/* .attribution {
 	font-size: 10px;
 	text-align: center;
 	position: fixed;
 	left: 0;
 	bottom: 0;
-	right: 10;
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
 	font-size: 11px;
-}
+} */
